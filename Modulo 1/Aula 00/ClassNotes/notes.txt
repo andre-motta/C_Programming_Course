@@ -1,0 +1,75 @@
+
+le um numero e imprime a tabuada(1-9) para esse numero
+
+leia numero
+
+para auxiliar de 1 a 9 faça
+    tabuada = numero * auxiliar
+    imprimir tabuada    
+fim faça
+
+pare
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){ 
+
+
+
+    int numero = 0;
+    int auxiliar;
+    int tabuada;
+    int num;
+
+    printf("Digite o numero que deseja saber a tabuada\n");
+    scanf("%d", &numero);
+    printf("Informe ate qual vamor deseja multiplicar\n");
+    scanf("%d", &num);
+
+
+    for(auxiliar = 1; auxiliar <= num; auxiliar++)
+    {
+       tabuada = numero * auxiliar;
+       //printf("tabuada = %d\n", tabuada);
+       printf("%d x %d = %d\n", numero, auxiliar, tabuada);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+
+    int a, b, c, d, e, f;
+    printf("digite a:\n");
+    scanf("%d", &a);
+    printf("digite b:\n");
+    scanf("%d", &b);
+    c = a+b;
+    d = a-b;
+    e = a*b;
+    f = a/b;
+    printf("c = %d\n", c);
+    printf("d = %d\n", d);
+    printf("e = %d\n", e);
+    printf("f = %d\n", f);
+
+
+
+    return 0;
+}
+
+int => inteiro
+char => caractere 
+double/float => numero decimal;
+
+inteiros %d;
+caracteres %c;
+double %u/%f;
+float %f;
