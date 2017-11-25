@@ -1,0 +1,124 @@
+Urionline 1103
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int h1, h2, m1, m2, result;
+    while(1)
+    {
+        scanf("%d %d %d %d", &h1, &m1, &h2, &m2);
+        if(h1 == 0 && m1 ==0 && h2 == 0 && m2 == 0)
+        {
+            break;
+        }
+        if(h1 == 0)
+        {
+            h1 = 24;
+        }
+        m1 = h1*60 + m1;
+
+        if(h2 == 0)
+        {
+            h2 = 24;
+        }
+        m2 = h2*60 + m2;
+        if (m1 >= m2)
+        {
+            m2 = 24*60 + m2;
+        }
+        result = m2 - m1;
+        printf("%d\n", result);
+    }
+
+
+    return 0;
+}
+
+AND ( && )
+ 1 1 = 1 
+ 0 1 = 0
+ 1 0 = 0
+ 0 0 = 0
+ 
+ OR ( || )
+ 1 1 = 1
+ 1 0 = 1
+ 0 1 = 1
+ 0 0 = 0
+
+#######################################################################
+
+
+int qual_maior(int a, int b, int c)
+{
+    if(a > b)
+    {
+        if(a > c)
+        {
+            if(b > c)
+            {
+                printf("a =%d e maior \n", a);
+            }
+            else
+            {
+                printf("a =%d e maior \n", a);
+            }
+        }
+        else
+        {
+            printf("c =%d e maior \n", c);
+        }
+    }
+    else if(b > c)
+    {
+         if(a > c)
+            {
+                printf("b =%d e maior \n", b);
+            }
+            else
+            {
+                printf("b =%d e maior \n", b);
+            }
+    }
+    else
+    {
+        printf("c =%d e maior \n", c);
+    }
+
+    return 0;
+}
+
+qual_maior2(int a, int b)
+{
+    if(a > b)
+    {
+        printf("a = %d e maior\n", a);
+
+    }
+    else
+    {
+        printf("b = %d e maior\n", b);
+    }
+}
+
+int main(){
+
+
+    int a, b, c ;
+
+    printf("digite a:\n");
+    scanf("%d", &a);
+
+    printf("digite b:\n");
+    scanf("%d", &b);
+
+    printf("digite c:\n");
+    scanf("%d", &c);
+
+    qual_maior(a, b, c);
+
+    return 0;
+}
+
